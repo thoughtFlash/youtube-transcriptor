@@ -1,0 +1,13 @@
+services:
+  transcriptor:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - whisper-models:/models
+    environment:
+      - WHISPER_MODEL=medium      # tiny | base | small | medium | large-v2 | large-v3
+    restart: unless-stopped
+
+volumes:
+  whisper-models:
