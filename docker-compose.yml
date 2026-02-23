@@ -1,6 +1,6 @@
 services:
   transcriptor:
-    build: .
+    image: ghcr.io/thoughtflash/youtube-transcriptor:latest
     ports:
       - "8000:8000"
     volumes:
